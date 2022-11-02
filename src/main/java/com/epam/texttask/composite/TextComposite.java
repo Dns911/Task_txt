@@ -5,28 +5,20 @@ import java.util.List;
 import java.util.StringJoiner;
 
 public class TextComposite implements TextComponent {
-    private GroupType type;
     private List<TextComponent> textComponents = new ArrayList<>();
 
-    public TextComposite() {
+    private GroupType unitType;
+
+//    public TextComposite() {
+//    }
+
+    public TextComposite(GroupType unitType) {
+        this.unitType = unitType;
     }
 
+    @Override
     public GroupType getType() {
-        return type;
-    }
-
-    public List<TextComponent> getTextComponents() {
-        return textComponents;
-    }
-
-    public List<TextComponent> getAllComponentByType(GroupType groupType) {
-        List<TextComponent> result = new ArrayList<>();
-        for (TextComponent textComponent: textComponents){
-            if (textComponent.getType().equals(groupType)){
-                result.add(textComponent);
-            }
-        }
-        return result;
+        return unitType;
     }
 
     public boolean add(TextComponent textComponent) {
@@ -37,9 +29,15 @@ public class TextComposite implements TextComponent {
         return textComponents.remove(o);
     }
 
-    public void setType(GroupType type) {
-        this.type = type;
-    }
+//    @Override
+//    public TextComposite getElementsByType(GroupType groupType){
+//        TextComposite resultComposite = new TextComposite();
+//        for (TextComponent txtComp: this.textComponents){
+//                resultComposite.add(txtComp.getElementsByType(groupType));
+//        }
+//        return resultComposite;
+//    }
+
 
     @Override
     public int count() {
@@ -53,8 +51,10 @@ public class TextComposite implements TextComponent {
 
     @Override
     public String toString() {
-        return new StringJoiner(" \n ", "{", "}\n")
-                .add("type=" + type + "\n" + " " + textComponents)
-                .toString();
+        String str = "";
+        for (TextComponent txtComponent : this.textComponents) {
+            str += txtComponent.toString();
+        }
+        return str;
     }
 }

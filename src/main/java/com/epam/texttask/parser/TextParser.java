@@ -9,21 +9,17 @@ import java.util.List;
 
 public class TextParser extends AbstractParser {
     static final String PARAGRAPH_REGEX = "\\n";
+    private AbstractParser nextSuccessor = new ParagraphParser();
 
     @Override
     public TextComposite parse(String str) {
-        TextComposite textComposite = new TextComposite();
-        textComposite.setType(GroupType.PARAGRAPH);
+        TextComposite textComposite = new TextComposite(GroupType.TEXT);
         List<String> result = Arrays.stream(str.split(PARAGRAPH_REGEX)).toList();
-        ParagraphParser paragraphParser = new ParagraphParser();
         for (String item : result) {
-            TextUnit textUnit = new TextUnit();
-            textUnit.setUnitText(item);
-            textUnit.setType(GroupType.PARAGRAPH);
+            TextUnit textUnit = new TextUnit(item, GroupType.PARAGRAPH);
             textComposite.add(textUnit);
-            textComposite.add(paragraphParser.parse(item));
+            textComposite.add(nextSuccessor.parse(item));
         }
-
         return textComposite;
     }
 }

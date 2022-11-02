@@ -10,9 +10,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         String str = """
-                A regular expression? Specified as a string, must first be compiled...
-                The resulting pattern can create a Matcher object!
-                All of the state involved in performing a match resides in the matcher, so many matchers can share the same pattern.
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the with there lease of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                It is a established fact that a reader will be of a page when looking at its layout.
+                Bye.
                 """;
 //        AlfaParser alfaParser = new AlfaParser();
 ////        List<String> prgrphs = alfaParser.parseToParagraph(str);
@@ -23,8 +24,7 @@ public class Main {
 //        System.out.println(lexemas.toString());
         TextParser textParser = new TextParser();
         TextComposite textMainComposite = textParser.parse(str);
-        //System.out.println(textMainComposite);
-        List<TextComponent> res = textMainComposite.getAllComponentByType(GroupType.LEXEMA);
-        System.out.println(res);
+        System.out.println(textMainComposite.toString());
+        //System.out.println(textMainComposite.getElementsByType(GroupType.TEXT));
     }
 }

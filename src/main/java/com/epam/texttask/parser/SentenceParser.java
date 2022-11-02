@@ -7,20 +7,18 @@ import com.epam.texttask.composite.TextUnit;
 import java.util.Arrays;
 import java.util.List;
 
-public class SentenceParser extends AbstractParser{
+public class SentenceParser extends AbstractParser {
     static final String LEXEMA_REGEX = "\\s+";
+    private AbstractParser nextSuccessor = new LexemaParser();
+
     @Override
     public TextComposite parse(String str) {
-        TextComposite textComposite = new TextComposite();
-        textComposite.setType(GroupType.LEXEMA);
+        TextComposite textComposite = new TextComposite(GroupType.SENTENCE);
         List<String> result = Arrays.stream(str.split(LEXEMA_REGEX)).toList();
-        LexemaParser lexemaParser = new LexemaParser();
         for (String item : result) {
-            TextUnit textUnit = new TextUnit();
-            textUnit.setType(GroupType.LEXEMA);
-            textUnit.setUnitText(item);
+            TextUnit textUnit = new TextUnit(item, GroupType.LEXEMA);
             textComposite.add(textUnit);
-            textComposite.add(lexemaParser.parse(item));
+            textComposite.add(nextSuccessor.parse(item));
         }
         return textComposite;
     }

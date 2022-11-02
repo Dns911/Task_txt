@@ -10,19 +10,16 @@ import java.util.List;
 public class ParagraphParser extends AbstractParser {
 
     static final String SENTENCE_REGEX = "(\\.|\\!|\\?)\\s+";
+    private AbstractParser nextSuccessor = new SentenceParser();
 
     @Override
     public TextComposite parse(String str) {
-        TextComposite textComposite = new TextComposite();
-        textComposite.setType(GroupType.SENTENCE);
+        TextComposite textComposite = new TextComposite(GroupType.PARAGRAPH);
         List<String> result = Arrays.stream(str.split(SENTENCE_REGEX)).toList();
-        SentenceParser sentenceParser = new SentenceParser();
         for (String item : result) {
-            TextUnit textUnit = new TextUnit();
-            textUnit.setType(GroupType.SENTENCE);
-            textUnit.setUnitText(item);
+            TextUnit textUnit = new TextUnit(item, GroupType.SENTENCE);
             textComposite.add(textUnit);
-            textComposite.add(sentenceParser.parse(item));
+            textComposite.add(nextSuccessor.parse(item));
         }
         return textComposite;
     }
