@@ -1,0 +1,24 @@
+Source text:
+It has survived, unchanged    It was mIpsum.    
+It long is layout    The more-or-less, 'Content here, content here', English.    
+It is layout    She a is    He.    
+Bye.    
+
+Task 1:
+Bye.    
+It has survived, unchanged    It was mIpsum.    
+It long is layout    The more-or-less, 'Content here, content here', English.    
+It is layout    She a is    He.    
+
+Task 2:
+It has survived, unchanged    It was mIpsum.    
+It is long layout    The here, here', content 'Content English. more-or-less,    
+It is layout    a is She    He.    
+Bye.    
+
+Task 3:
+It was mIpsum.    It has survived, unchanged    
+It long is layout    The more-or-less, 'Content here, content here', English.    
+He.    It is layout    She a is    
+Bye.    
+
