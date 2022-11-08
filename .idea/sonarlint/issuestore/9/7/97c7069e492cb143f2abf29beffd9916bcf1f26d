@@ -1,0 +1,9 @@
+
+y
+java:S1488!"^Immediately return this expression instead of assigning it to the temporary variable "result".(Ú»‘ıÿÿÿÿ
+K
+java:S6035"0Replace this alternation with a character class.(ãÑÆŒûÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+N
+java:S1128"3Remove this unused import 'java.util.StringJoiner'.(ëûÁ‹úÿÿÿÿ

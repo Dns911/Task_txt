@@ -16,8 +16,6 @@ public class SentenceParser extends AbstractParser {
         TextComposite textComposite = new TextComposite(GroupType.SENTENCE);
         List<String> result = Arrays.stream(str.split(LEXEMA_REGEX)).toList();
         for (String item : result) {
-            TextUnit textUnit = new TextUnit(item, GroupType.LEXEMA);
-            textComposite.add(textUnit);
             textComposite.add(nextSuccessor.parse(item));
         }
         return textComposite;

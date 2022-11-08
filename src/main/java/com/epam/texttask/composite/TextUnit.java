@@ -1,11 +1,12 @@
 package com.epam.texttask.composite;
 
+import com.epam.texttask.comparator.TextComparator;
+
+import java.util.ArrayList;
 import java.util.List;
-import java.util.StringJoiner;
 
 public class TextUnit implements TextComponent {
     private String unitText;
-
     private GroupType unitType;
 
     public TextUnit(String unitText, GroupType unitType) {
@@ -13,36 +14,41 @@ public class TextUnit implements TextComponent {
         this.unitType = unitType;
     }
 
+    @Override
+    public List<TextComponent> getElements() {
+        return new ArrayList<>();
+
+    }
+
+    @Override
+    public void setElements(List<TextComponent> list) {
+    }
+
+    @Override
     public GroupType getType() {
         return unitType;
     }
 
     @Override
-    public int count() {
+    public void setType(GroupType unitType) {
+        this.unitType = unitType;
+    }
+
+    public void handler(GroupType groupType, TextComparator textComparator) {
+    }
+
+    @Override
+    public int countSymbol() {
         return 1;
     }
 
-
-//    @Override
-//    public TextComponent getElementsByType(GroupType groupType){
-//        if (this.getType().equals(groupType)){
-//            return this;
-//        }
-//        return this;
-//    }
+    @Override
+    public int countNextType() {
+        return 0;
+    }
 
     @Override
     public String toString() {
-        String str;
-        if (this.getType().equals(GroupType.SYMBOL)) {
-            str = unitText;
-        } else if (this.getType().equals(GroupType.LEXEMA)) {
-            str = " ";
-        } else if (this.getType().equals(GroupType.SENTENCE)) {
-            str = " ";
-        } else {
-            str = "\n"; // new line
-        }
-        return str;
+        return unitText;
     }
 }
