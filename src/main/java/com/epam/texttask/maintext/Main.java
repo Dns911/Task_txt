@@ -22,14 +22,10 @@ public class Main {
                 It is layout. She a is. He.
                 Bye.
                 """;
-//
         TextParser textParser = new TextParser();
         TextComposite textMainComposite = textParser.parse(str);
-        System.out.println(textMainComposite);
 
         textMainComposite.handler(GroupType.PARAGRAPH, TextComparator.COUNT_NEXT_TYPE);
-        System.out.println(textMainComposite);
-        System.out.println(textMainComposite.getType().toString());
         TextWriter textWriter = new TextWriter();
         textWriter.textToFile("Task N:\n" + textMainComposite.toString(), "", true);
 

@@ -13,9 +13,9 @@ public class TextParser extends AbstractParser {
     @Override
     public TextComposite parse(String str) {
         TextComposite textComposite = new TextComposite(GroupType.TEXT);
-        List<String> result = Arrays.stream(str.split(PARAGRAPH_REGEX)).toList();
-        for (String item : result) {
-            textComposite.add(nextSuccessor.parse(item));
+        List<String> elements = Arrays.stream(str.split(PARAGRAPH_REGEX)).toList();
+        for (String element : elements) {
+            textComposite.add(nextSuccessor.parse(element));
         }
         return textComposite;
     }

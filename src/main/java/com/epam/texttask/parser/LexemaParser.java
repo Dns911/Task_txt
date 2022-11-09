@@ -8,9 +8,9 @@ public class LexemaParser extends AbstractParser {
     @Override
     public TextComposite parse(String str) {
         TextComposite textComposite = new TextComposite(GroupType.LEXEMA);
-        char[] charArr = str.toCharArray();
-        for (char item : charArr) {
-            TextUnit textUnit = new TextUnit(String.valueOf(item), GroupType.SYMBOL);
+        char[] symbols = str.toCharArray();
+        for (char symbol : symbols) {
+            TextUnit textUnit = new TextUnit(String.valueOf(symbol), GroupType.SYMBOL);
             textComposite.add(textUnit);
         }
         return textComposite;

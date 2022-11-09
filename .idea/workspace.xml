@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7aa366c-d607-406d-a7e7-6959703bd86e" name="Changes" comment="31.10">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97c7069e492cb143f2abf29beffd9916bcf1f26d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/action/TextAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/action/impl/TextActionImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/comparator/TextComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/writer/TextWriter.java" afterDir="false" />
+    <list default="true" id="e7aa366c-d607-406d-a7e7-6959703bd86e" name="Changes" comment="08.11">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/texttask/composite/GroupType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/composite/GroupType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/texttask/composite/TextComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/composite/TextComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/texttask/composite/TextComposite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/composite/TextComposite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/texttask/composite/TextUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/composite/TextUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/texttask/maintext/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/maintext/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/texttask/parser/LexemaParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/parser/LexemaParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/texttask/parser/ParagraphParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/parser/ParagraphParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/texttask/parser/SentenceParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/parser/SentenceParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/texttask/parser/TextParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/texttask/parser/TextParser.java" afterDir="false" />
@@ -53,7 +44,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "last_opened_file_path": "D:/EDUCATION/JAVA/Practice/TaskArray",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/EDUCATION/JAVA/Practice/Task_txt",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -92,6 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667231177452</updated>
+      <workItem from="1668007497539" duration="315000" />
     </task>
     <task id="LOCAL-00001" summary="31.10">
       <created>1667231936004</created>
@@ -107,8 +104,25 @@
       <option name="project" value="LOCAL" />
       <updated>1667400757809</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="08.11">
+      <created>1667923990885</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667923990885</updated>
+    </task>
+    <task id="LOCAL-00004" summary="08.11">
+      <created>1667924006547</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667924006547</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -123,6 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="31.10" />
-    <option name="LAST_COMMIT_MESSAGE" value="31.10" />
+    <MESSAGE value="08.11" />
+    <option name="LAST_COMMIT_MESSAGE" value="08.11" />
   </component>
 </project>
